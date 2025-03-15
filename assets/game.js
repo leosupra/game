@@ -17,7 +17,7 @@ function preload() {
 }
 
 function setup() {
-  canvas = createCanvas(600, 800);
+  canvas = createCanvas(800, 600);
   centerCanvas();
   background(0, 0, 0);
   textFont('Arial');
