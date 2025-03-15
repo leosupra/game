@@ -64,7 +64,7 @@ function handleInput() {
 
 function updateGame() {
   // Increase difficulty over time
-  if (millis() - speedIncreaseTimer > 3000) {
+  if (millis() - speedIncreaseTimer > 5000) {
     rockSpeed += 0.5;
     maxRocks = min(10, maxRocks + 1);
     speedIncreaseTimer = millis();
