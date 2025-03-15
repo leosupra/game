@@ -100,9 +100,9 @@ function drawGame() {
     image(rockImg, rock.x, rock.y, rock.w, rock.h);
   }
   
-  // Draw score
+  // Draw score at a fixed position
   fill(76, 187, 23);
-  text(`Score: ${score}`, 10, 30);
+  text(`Score: ${score}`, 10, 30); 
 }
 
 function drawGameOver() {
@@ -118,14 +118,14 @@ function drawGameOver() {
 function keyPressed() {
   if (gameOver && key === ' ') {
     // Reset game state and restart
-    score = 0;
-    rocks = []; 
-    lionY = height / 2 - 40; 
-    rockSpeed = 10;
-    maxRocks = 3; 
-    gameOver = false;  
-    speedIncreaseTimer = millis();
-    background(0, 0, 0); 
+    score = 0;   // Reset score
+    rocks = [];  // Clear all rocks
+    lionY = height / 2 - 40;  // Reset lion position
+    rockSpeed = 10; // Reset rock speed
+    maxRocks = 3;  // Reset max rocks
+    gameOver = false;  // Reset game over flag
+    speedIncreaseTimer = millis(); // Reset timer
+    background(0, 0, 0); // Clear the background
   }
 }
 
