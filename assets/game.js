@@ -7,6 +7,7 @@ let maxRocks = 3;
 let gameOver = false;
 let speedIncreaseTimer;
 let myFont;
+let canvas;
 
 function preload() {
   // Load assets - update paths to your actual files
@@ -14,10 +15,11 @@ function preload() {
   rockImg = loadImage('assets/2.chd');
   bgImg = loadImage('assets/3.chd');
 }
+
 function setup() {
-  let canvas = createCanvas(600, 800);
-  canvas.position((windowWidth - width) / 2, (windowHeight - height) / 2);
-  createCanvas(800, 600);
+  canvas = createCanvas(600, 800);
+  centerCanvas();
+  background(0);
   textFont('Arial');
   textSize(24);
   
@@ -26,6 +28,16 @@ function setup() {
   lionY = height/2 - 40;
   
   speedIncreaseTimer = millis();
+}
+
+function centerCanvas() {
+  let x = (windowWidth - width) / 2;
+  let y = (windowHeight - height) / 2;
+  canvas.position(x, max(y, 0)); // Ensures it doesn't go off-screen
+}
+
+function windowResized() {
+  centerCanvas(); // Re-center when window is resized
 }
 
 function draw() {
