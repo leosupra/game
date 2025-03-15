@@ -15,7 +15,8 @@ function preload() {
   bgImg = loadImage('assets/3.chd');
 }
 function setup() {
-  createCanvas(windowWidth, windowHeight); // Full-screen canvas
+  let canvas = createCanvas(600, 800);
+  canvas.position((windowWidth - width) / 2, (windowHeight - height) / 2);
   createCanvas(800, 600);
   textFont('Arial');
   textSize(24);
