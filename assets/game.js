@@ -25,7 +25,7 @@ function setup() {
   
   // Initial lion position
   lionX = 20;
-  lionY = height/2 - 40;
+  lionY = height / 2 - 40;
   
   speedIncreaseTimer = millis();
 }
@@ -71,7 +71,7 @@ function updateGame() {
   }
   
   // Update rocks
-  for (let i = rocks.length-1; i >= 0; i--) {
+  for (let i = rocks.length - 1; i >= 0; i--) {
     rocks[i].x -= rockSpeed;
     
     // Remove off-screen rocks
@@ -108,23 +108,24 @@ function drawGame() {
 function drawGameOver() {
   fill(0);
   textAlign(CENTER);
-  text(" soldier, You failed in your duty to protect Leo !", width/2, 180);
+  text(" soldier, You failed in your duty to protect Leo !", width / 2, 180);
   fill(76, 187, 23);
-  text(`Your Score: ${score}`, width/2, 275);
+  text(`Your Score: ${score}`, width / 2, 275);
   fill(255);
-  text("Press SPACE to Retry", width/2, 560);
+  text("Press SPACE to Retry", width / 2, 560);
 }
 
 function keyPressed() {
   if (gameOver && key === ' ') {
-    // Reset game state
-    lionY = height/2 - 40;
+    // Reset game state and restart
     score = 0;
-    rocks = [];
+    rocks = []; 
+    lionY = height / 2 - 40; 
     rockSpeed = 10;
-    maxRocks = 3;
-    gameOver = false;
+    maxRocks = 3; 
+    gameOver = false;  
     speedIncreaseTimer = millis();
+    background(0, 0, 0); 
   }
 }
 
