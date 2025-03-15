@@ -33,7 +33,7 @@ function setup() {
 function centerCanvas() {
   let x = (windowWidth - width) / 2;
   let y = (windowHeight - height) / 2;
-  canvas.position(x, max(y, 0)); // Ensures it doesn't go off-screen
+  canvas.position(x, y);
 }
 
 function windowResized() {
