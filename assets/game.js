@@ -118,7 +118,6 @@ function drawGameOver() {
 function keyPressed() {
   if (gameOver && key === ' ') {
     // Reset game state and restart
-    function drawGame()
     score = 0;   // Reset score
     rocks = [];  // Clear all rocks
     lionY = height / 2 - 40;  // Reset lion position
@@ -126,6 +125,7 @@ function keyPressed() {
     maxRocks = 3;  // Reset max rocks
     gameOver = false;  // Reset game over flag
     speedIncreaseTimer = millis(); // Reset timer
+    centerCanvas();
     background(0, 0, 0); // Clear the background
   }
 }
