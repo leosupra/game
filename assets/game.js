@@ -118,6 +118,7 @@ function drawGameOver() {
 function keyPressed() {
   if (gameOver && key === ' ') {
     // Reset game state and restart
+    function drawGame()
     score = 0;   // Reset score
     rocks = [];  // Clear all rocks
     lionY = height / 2 - 40;  // Reset lion position
