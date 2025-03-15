@@ -127,6 +127,7 @@ function keyPressed() {
     speedIncreaseTimer = millis(); // Reset timer
     centerCanvas();
     background(0, 0, 0); // Clear the background
+    loop();
   }
 }
 
