@@ -65,9 +65,9 @@ function displayStartScreen() {
   fill(0);
   textAlign(CENTER, CENTER);
   textSize(32);
-  text("Soldier, are you ready to protect Leo ?", width * 0.5, height * 0.2);
+  text("Soldier, are you ready to protect Leo ?", width * 0.5, height * 0.3);
   fill(255);
-  text("Press SPACE to Start", width * 0.5, height * 0.8);
+  text("Press SPACE to Start", width * 0.5, height * 0.9);
 }
 
 function handleInput() {
