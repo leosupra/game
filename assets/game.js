@@ -30,8 +30,6 @@ function setup() {
   lionY = height / 2 - 40;
   
   speedIncreaseTimer = millis();
-  bgMusic.loop();
-  bgMusic.setVolume(0.5);
 }
 
 function centerCanvas() {
@@ -128,8 +126,11 @@ function keyPressed() {
     rockSpeed = 10; // Reset rock speed
     maxRocks = 3;  // Reset max rocks
     gameOver = false;  // Reset game over flag
-    speedIncreaseTimer = millis(); // Reset timer
-    
+    speedIncreaseTimer = millis(); // Reset timer  
+  }
+  if (!bgMusic.isPlaying()) {
+    bgMusic.loop();  // Start music on first user interaction
+    bgMusic.setVolume(0.5);
   }
 }
 
