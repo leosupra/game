@@ -8,12 +8,14 @@ let gameOver = false;
 let speedIncreaseTimer;
 let myFont;
 let canvas;
+let bgMusic;
 
 function preload() {
   // Load assets - update paths to your actual files
   lion = loadImage('assets/1.chd');
   rockImg = loadImage('assets/2.chd');
   bgImg = loadImage('assets/3.chd');
+  bgMusic = loadSound('assets/4.chd');
 }
 
 function setup() {
@@ -28,6 +30,8 @@ function setup() {
   lionY = height / 2 - 40;
   
   speedIncreaseTimer = millis();
+  bgMusic.loop();
+  bgMusic.setVolume(0.5);
 }
 
 function centerCanvas() {
