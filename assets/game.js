@@ -20,7 +20,7 @@ function setup() {
   canvas = createCanvas(windowWidth, windowHeight);
   centerCanvas();
   background(0, 0, 0);
-  textFont('Tahoma');
+  textFont('Arial Black');
   textSize(24);
   
   // Initial lion position
