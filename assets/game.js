@@ -125,11 +125,11 @@ function drawGame() {
 function drawGameOver() {
   fill(0);
   textAlign(CENTER);
-  text(" soldier, You failed in your duty to protect Leo !", width / 2, 180);
+  text(" soldier, You failed in your duty to protect Leo !", width * 0.5, height * 0.3);
   fill(76, 187, 23);
-  text(`Your Score: ${score}`, width / 2, 275);
+  text(`Your Score: ${score}`, width * 0.5, height * 0.6);
   fill(255);
-  text("Press SPACE to Retry", width / 2, 560);
+  text("Press SPACE to Retry", width * 0.5, height * 0.9);
 }
 
 function keyPressed() {
