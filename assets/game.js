@@ -14,14 +14,13 @@ function preload() {
   lion = loadImage('assets/1.chd');
   rockImg = loadImage('assets/2.chd');
   bgImg = loadImage('assets/3.chd');
-  myFont = loadFont('assets/impact.ttf');
 }
 
 function setup() {
   canvas = createCanvas(windowWidth, windowHeight);
   centerCanvas();
   background(0, 0, 0);
-  textFont(myFont);
+  textFont('Impact');
   textSize(24);
   
   // Initial lion position
