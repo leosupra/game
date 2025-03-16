@@ -102,8 +102,6 @@ function drawGame() {
   // text
   fill(76, 187, 23);
   textAlign(LEFT, TOP);  // Align text to the top-left corner
-  textStyle(BOLD);
-  textShadow(2, 2, color(0, 0, 0, 50));
   text(`Score: ${score}`, 10, 10); 
 }
 
