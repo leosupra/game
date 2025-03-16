@@ -9,6 +9,7 @@ let speedIncreaseTimer;
 let myFont;
 let canvas;
 let bgMusic;
+let gameStarted = false; 
 
 function preload() {
   // Load assets - update paths to your actual files
@@ -46,13 +47,25 @@ function draw() {
   // Draw background
   image(bgImg, 0, 0, width, height);
   
-  if (!gameOver) {
-    handleInput();
-    updateGame();
-    drawGame();
+  if (!gameStarted) {
+    // Show start screen
+    displayStartScreen();
   } else {
-    drawGameOver();
+    if (!gameOver) {
+      handleInput();
+      updateGame();
+      drawGame();
+    } else {
+      drawGameOver();
+    }
   }
+}
+
+function displayStartScreen() {
+  fill(255);
+  textAlign(CENTER, CENTER);
+  textSize(32);
+  text("Press SPACE to Start", width / 2, height / 2);
 }
 
 function handleInput() {
@@ -118,6 +131,14 @@ function drawGameOver() {
 }
 
 function keyPressed() {
+  if (key === ' ' && !gameStarted) {
+    gameStarted = true; // Start the game when space is pressed
+    if (!bgMusic.isPlaying()) {
+      bgMusic.loop();  // Start music on first user interaction
+      bgMusic.setVolume(0.5);
+    }
+  }
+
   if (gameOver && key === ' ') {
     // Reset game state and restart
     score = 0;   // Reset score
@@ -127,10 +148,6 @@ function keyPressed() {
     maxRocks = 3;  // Reset max rocks
     gameOver = false;  // Reset game over flag
     speedIncreaseTimer = millis(); // Reset timer  
-  }
-  if (!bgMusic.isPlaying()) {
-    bgMusic.loop();  // Start music on first user interaction
-    bgMusic.setVolume(0.5);
   }
 }
 
