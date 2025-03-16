@@ -99,10 +99,10 @@ function drawGame() {
   for (let rock of rocks) {
     image(rockImg, rock.x, rock.y, rock.w, rock.h);
   }
-  
-  // Draw score at a fixed position
+  // text
   fill(76, 187, 23);
-  text(`Score: ${score}`, 10, 30); 
+  textAlign(LEFT, TOP);  // Align text to the top-left corner
+  text(`Score: ${score}`, 10, 10); 
 }
 
 function drawGameOver() {
@@ -125,9 +125,7 @@ function keyPressed() {
     maxRocks = 3;  // Reset max rocks
     gameOver = false;  // Reset game over flag
     speedIncreaseTimer = millis(); // Reset timer
-    centerCanvas();
-    background(0, 0, 0); // Clear the background
-    loop();
+    
   }
 }
 
