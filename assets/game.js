@@ -106,7 +106,7 @@ function drawGame() {
 }
 
 function drawGameOver() {
-  fill(255, 69, 0);
+  fill(0);
   textAlign(CENTER);
   text(" soldier, You failed in your duty to protect Leo !", width / 2, 180);
   fill(76, 187, 23);
