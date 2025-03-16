@@ -62,10 +62,12 @@ function draw() {
 }
 
 function displayStartScreen() {
-  fill(255);
+  fill(0);
   textAlign(CENTER, CENTER);
   textSize(32);
-  text("Press SPACE to Start", width / 2, height / 2);
+  text("Soldier, are you ready to protect Leo ?", width / 2, height / 2);
+  fill(255);
+  text("Press SPACE to Start", width / 2, 560);
 }
 
 function handleInput() {
