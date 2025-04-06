@@ -1,5 +1,5 @@
 let lion, rockImg, bgImg;
-let lionX, lionY, lionSpeed = 12;
+let lionX, lionY, lionSpeed = 15;
 let score = 0;
 let rocks = [];
 let rockSpeed = 10;
