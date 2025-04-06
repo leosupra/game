@@ -1,8 +1,8 @@
 let lion, rockImg, bgImg;
-let lionX, lionY, lionSpeed = 15;
+let lionX, lionY, lionSpeed = 13;
 let score = 0;
 let rocks = [];
-let rockSpeed = 15;
+let rockSpeed = 13;
 let maxRocks = 3;
 let gameOver = false;
 let speedIncreaseTimer;
